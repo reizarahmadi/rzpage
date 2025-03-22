@@ -1,13 +1,13 @@
 title: Kebun Digital Eja
 description: Tempat tumbuh pelan-pelan
-baseurl: "" # kosongkan kalau di root
+baseurl: "rzpage"
 url: "https://reizarahmadi.github.io"
 collections:
   notes:
     output: true
 defaults:
   - scope:
-      path: "notes"
+      path: "_posts"
     values:
       layout: default
       permalink: /:name/
