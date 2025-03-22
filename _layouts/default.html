@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 2em; line-height: 1.6; }
+    a { color: #007acc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+  <nav><a href="{{ '/' | relative_url }}">Home</a></nav>
+  {{ content }}
+</body>
+</html>
