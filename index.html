@@ -2,6 +2,18 @@
 layout: default
 title: Home
 ---
+<h3>Terbaru</h3>
+
+{% assign posts = site.posts }
+	{% for post in posts limit:10 %}
+{% for yearMonth in postsByYearMonth %}
+  <h2>Tulisan</h2>
+  <ul>
+    {% for post in yearMonth.items %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
 <div class="posts">
   {% for post in paginator.posts %}
