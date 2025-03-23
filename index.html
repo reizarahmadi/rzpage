@@ -15,6 +15,7 @@ title: Home
     <li>
       <strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></strong> —
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
     </li>
   {% endfor %}
 </ul>
@@ -22,20 +23,14 @@ title: Home
 <hr/>
 
 <h3>Daftar Catatan</h3>
-<table style="width:100%;" class='with-row-counter mobile-friendly'>
-  <tbody>
-    {% assign posts = site.posts %}
-    {% for post in posts limit: 10 %}
-      <tr>
-        <td><strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></strong></td>
-        <td style="width:100%;">
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>
-          {{ post.description }}
-        </td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<ul>
+  {% assign posts = site.posts | sort: "date" | reverse %}
+  {% for post in posts limit: 10 %}
+    <li>
+      <strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y • %m" }}</time></strong> —
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
 
 {% if posts.size > 10 %}
   <p><a href="{{ site.baseurl }}/writings">Lihat semua tulisan →</a></p>
