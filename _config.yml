@@ -1,6 +1,6 @@
 # Setup
-title: Dark Poole
-url: https://getpoole.com
+title: Reiza Rahmadi
+url: http://reizarahmadi
 paginate: 1
 baseurl: ""
 permalink: pretty
@@ -32,17 +32,17 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Reiza Rahmadi
+  url: https://instagram.com/akhmdrz
+  email: kpd@reizarahmadi.com
 
 # Custom vars
 version: 3.0.0
 
 # Navbar page list
 nav:
-  - title: Blog
+  - title: Tulisan
     url: /archive
 
-  - title: About
+  - title: Tentang
     url: /about
