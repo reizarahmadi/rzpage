@@ -28,7 +28,7 @@ title: Beranda
   {% assign posts = site.posts | sort: "date" | reverse %}
   {% for post in posts limit: 10 %}
     <li>
-      <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y • %m" }}</time> —</small>
+      <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y / %m" }}</time> —</small>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
