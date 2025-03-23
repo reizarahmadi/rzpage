@@ -11,9 +11,13 @@ title: Beranda
 <br />
   {% assign latest_posts = site.posts | sort: "date" | reverse %}
   {% for post in latest_posts limit: 1 %}
-    <h2 class="post-title"> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-    <p>{{ post.excerpt }} →</p>
+    <a href="{{ post.url | relative_url }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <small>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+        <p>{{ post.excerpt }}</p>
+      </small>
+    </a>
   {% endfor %}
     
 <hr/>
@@ -24,7 +28,7 @@ title: Beranda
   {% assign posts = site.posts | sort: "date" | reverse %}
   {% for post in posts limit: 10 %}
     <li>
-      <small></small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y • %m" }}</time> —</small>
+      <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y • %m" }}</time> —</small>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
