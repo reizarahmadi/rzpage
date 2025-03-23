@@ -2,48 +2,42 @@
 layout: default
 title: Home
 ---
-<h3>Terbaru</h3>
 
-{% assign posts = site.posts }
-	{% for post in posts limit:10 %}
-{% for yearMonth in postsByYearMonth %}
-  <h2>Tulisan</h2>
-  <ul>
-    {% for post in yearMonth.items %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+<h1>Halo.</h1>
+<p>Sebuah pekarangan karangan milik Reiza Rahmadi. Di sini tempat aku menuliskan catatan, pikiran dan perjalanan hidup secara pelan-pelan.</p>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<hr/>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-    {{ post.content }}
-  </article>
+<h3>Tulisan Akhir</h3>
+<ul>
+  {% assign latest_posts = site.posts | sort: "date" | reverse %}
+  {% for post in latest_posts limit: 5 %}
+    <li>
+      <strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></strong> —
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
   {% endfor %}
+</ul>
 
-  <table style="width:100%;" class='with-row-counter mobile-friendly'>
-    <tbody>
-      {% assign writings_posts = site.posts | where: "categories", "writings" %}
-      {% for post in writings_posts limit:5 %}
-        <tr>
-          <td><strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y&nbsp;%b&nbsp;%d" }}</time></strong></td>
-          <td style="width:100%;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>{{ post.description }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<hr/>
 
-{% assign writings_posts = site.posts | where: "categories", "writings" %} {% if
-writings_posts.size > 5 %}
-[See more <span class="nowrap"><img src='/assets/icons/writings.svg' alt='' class="icon"/>writings</span> →](/writings)
+<h3>Daftar Catatan</h3>
+<table style="width:100%;" class='with-row-counter mobile-friendly'>
+  <tbody>
+    {% assign writings_posts = site.posts | where: "categories", "writings" %}
+    {% for post in writings_posts limit: 5 %}
+      <tr>
+        <td><strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y&nbsp;%b&nbsp;%d" }}</time></strong></td>
+        <td style="width:100%;">
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>
+          {{ post.description }}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if writings_posts.size > 10 %}
+  <p><a href="{{ site.baseurl }}/writings">Lihat semua tulisan →</a></p>
 {% endif %}
-</div>
+
