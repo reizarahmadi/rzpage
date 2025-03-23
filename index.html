@@ -1,26 +1,23 @@
 ---
 layout: default
-title: Home
+title: Beranda
 ---
 
-<h1>Halo.</h1>
-<p>Sebuah pekarangan karangan milik Reiza Rahmadi. Di sini tempat aku menuliskan catatan, pikiran dan perjalanan hidup secara pelan-pelan.</p>
+<p>Sebuah pekarangan catatan dan karangan. Di sini tempat aku menulis catatan, pikiran dan perjalanan hidup secara pelan-pelan. Isi dapat sewaktu-waktu berubah.</p>
 
-<hr/>
+<br />
 
 <h4>Tulisan Akhir</h4>
-  <div class="container content">
-    {% assign latest_posts = site.posts | sort: "date" | reverse %}
-    {% for post in latest_posts limit: 1 %}
-      <a href="{{ post.url | relative_url }}">
-        <h2 class="post-title">{{ post.title }}</h2><br />
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> —
-        <p>{{ post.excerpt }}</p>
-      </a>
-    {% endfor %}
-  </div>
+  {% assign latest_posts = site.posts | sort: "date" | reverse %}
+  {% for post in latest_posts limit: 1 %}
+    <a href="{{ post.url | relative_url }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> —
+      <p>{{ post.excerpt }}</p>
+    </a>
+  {% endfor %}
     
-<hr/>
+<br />
 
 <h4>Daftar Catatan</h4>
 <ul>
