@@ -17,4 +17,21 @@ title: Home
     {{ post.content }}
   </article>
   {% endfor %}
+
+  <table style="width:100%;" class='with-row-counter mobile-friendly'>
+    <tbody>
+      {% assign writings_posts = site.posts | where: "categories", "writings" %}
+      {% for post in writings_posts limit:5 %}
+        <tr>
+          <td><strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y&nbsp;%b&nbsp;%d" }}</time></strong></td>
+          <td style="width:100%;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/>{{ post.description }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% assign writings_posts = site.posts | where: "categories", "writings" %} {% if
+writings_posts.size > 5 %}
+[See more <span class="nowrap"><img src='/assets/icons/writings.svg' alt='' class="icon"/>writings</span> →](/writings)
+{% endif %}
 </div>
