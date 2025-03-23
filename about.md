@@ -1,9 +1,7 @@
 ---
 layout: page
-title: About
+title: Tentang
 ---
-
-# Tentang
 
 Namaku Reiza Rahmadi. Beberapa orang lebih akrab memanggil Eja. Saat ini bekerja mengembangkan [JAR](https://justaboutright.co)–sebuah jaringan peneliti komersil yang mendalami konsumen Indonesia.
 
