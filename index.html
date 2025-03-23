@@ -8,26 +8,26 @@ title: Home
 
 <hr/>
 
-<h3>Tulisan Akhir</h3>
-<ul>
-  {% assign latest_posts = site.posts | sort: "date" | reverse %}
-  {% for post in latest_posts limit: 1 %}
-    <li>
-      <strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></strong> —
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
-
+<h4>Tulisan Akhir</h4>
+  <div class="container content">
+    {% assign latest_posts = site.posts | sort: "date" | reverse %}
+    {% for post in latest_posts limit: 1 %}
+      <a href="{{ post.url | relative_url }}">
+        <h2 class="post-title">{{ post.title }}</h2><br />
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> —
+        <p>{{ post.excerpt }}</p>
+      </a>
+    {% endfor %}
+  </div>
+    
 <hr/>
 
-<h3>Daftar Catatan</h3>
+<h4>Daftar Catatan</h4>
 <ul>
   {% assign posts = site.posts | sort: "date" | reverse %}
   {% for post in posts limit: 10 %}
     <li>
-      <strong><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y • %m" }}</time></strong> —
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y • %m" }}</time>  
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
