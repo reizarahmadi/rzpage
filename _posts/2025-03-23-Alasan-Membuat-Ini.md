@@ -9,7 +9,7 @@ excerpt: Setelah ribuan hari menulis, suatu hari aku berkontemplasi, "lalu buat 
 
 _Untuk menulis adalah untuk berpikir_.
 
-Entah aku dapatkan kalimat itu dari sebuah bacaan. Menulis sudah lama menjadi hal yang melekat. Terutama 2-3 tahun belakangan ini. Aku mulai menulis lagi di buku catatan–sebuah investasi yang tidak murah jika ingin punya rasa kesenangannya–setelah bertahun-tahun tidak pernah menghabiskan satupun buku catatan yang pernah aku beli. Dari hal ini, aku kenal dengan dunia pena (_fountain pen_), kertas yang otomatis lebih mahal (karena tinta pena suka tembus di kertas _ehem_ murah), dan juga buku-buku merek import yang lebih mahal.
+Entah aku dapatkan kalimat itu dari sebuah bacaan. Menulis sudah lama menjadi [hal yang melekat](https://reizarahmadi.com/tulisan/2025/03/24/Perjalanan-Menulis/). Terutama 2-3 tahun belakangan ini. Aku mulai menulis lagi di buku catatan–sebuah investasi yang tidak murah jika ingin punya rasa kesenangannya–setelah bertahun-tahun tidak pernah menghabiskan satupun buku catatan yang pernah aku beli. Dari hal ini, aku kenal dengan dunia pena (_fountain pen_), kertas yang otomatis lebih mahal (karena tinta pena suka tembus di kertas _ehem_ murah), dan juga buku-buku merek import yang lebih mahal.
 
 Setelah ribuan hari menulis, tumbuhlah ribuan catatan. Ratusan halaman telah diisi, begitu juga dengan ratusan file markdown tercipta. Suatu hari aku berkontemplasi, "lalu buat apa semua catatan ini?", sebuah pertanyaan yang aku renungkan cukup lama. Rasanya banyak pemikiran yang terbuahkan tapi tidak pernah dilahirkan. Perjalananku yang pernah aku tempuh saat mempelajari _productivity tools_ ini sedikit banyaknya membuatku mengerti untuk sampai di sini.
 
